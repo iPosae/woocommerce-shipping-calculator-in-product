@@ -10,22 +10,23 @@
 	<div>
 		<strong>Envio para todo o país </strong>
 		<span>Saiba os prazos de entrega e as formas de envio</span>
-		<a id="modal__open">Calcule seu frete aqui</a>
+		<a uk-toggle="target: #shipping-calculator-modal">Calcule seu frete aqui</a>
 	</div>
 	</div>
-	<div class="modal__hidden">
-	<div class="close__modal">X</div>
-	<strong>Calcule o frete para saber os valores de entrega</strong>
-	<span>Você poderá ver os custos e prazos de entrega precisos em tudo que procurar.</span>
-	<input type='tel' id='wscp-postcode' autocomplete="off" placeholder="<?=get_option('wscip_placeholder', __('Insira o seu CEP','wsc-plugin') )?>" name='wscp-postcode' class='input-text text' />
+	<div id="shipping-calculator-modal" uk-modal>
+		<div class="uk-modal-dialog uk-modal-body">
+		<button class="uk-modal-close-outside" type="button" uk-close></button>		
+		<h2 class="uk-modal-title">Calcule o frete para saber os valores de entrega</h2>
+			<p>Você poderá ver os custos e prazos de entrega precisos em tudo que procurar.</p>
+			<input type='tel' id='wscp-postcode' autocomplete="off" placeholder="<?=get_option('wscip_placeholder', __('Insira o seu CEP','wsc-plugin') )?>" name='wscp-postcode' class='input-text text' />
 
-	<input type='button' id='wscp-button' class='button wscp-button' value='<?= __('Calcular','wsc-plugin'); ?>' style="color: <?=get_option('wscip_btn_color_text','#ffffff');?>; background-color: <?=get_option('wscip_btn_color','#999999');?>">
+			<input type='button' id='wscp-button' class='button wscp-button' value='<?= __('Calcular','wsc-plugin'); ?>' style="color: <?=get_option('wscip_btn_color_text','#ffffff');?>; background-color: <?=get_option('wscip_btn_color','#999999');?>">
 
-	<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank"><?php _e('Não sei meu CEP','wsc-plugin'); ?></a>
+			<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank"><?php _e('Não sei meu CEP','wsc-plugin'); ?></a>
 
-	<input type='hidden' name='wscp-nonce' id='wscp-nonce' value='<?= wp_create_nonce( 'wscp-nonce' ); ?>'>
+			<input type='hidden' name='wscp-nonce' id='wscp-nonce' value='<?= wp_create_nonce( 'wscp-nonce' ); ?>'>
 
-	<div id='wscp-response'></div> 
-	</div> 
-	
+			<div id='wscp-response'></div> 
+		</div>
+	</div>
 </div>
