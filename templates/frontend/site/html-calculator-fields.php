@@ -20,7 +20,7 @@
 			<p>Você poderá ver os custos e prazos de entrega precisos em tudo que procurar.</p>
 			<input type='tel' id='wscp-postcode' autocomplete="off" placeholder="<?=get_option('wscip_placeholder', __('Insira o seu CEP','wsc-plugin') )?>" name='wscp-postcode' class='input-text text' />
 
-			<input type='button' id='wscp-button' class='button wscp-button' value='<?= __('Calcular','wsc-plugin'); ?>' style="color: <?=get_option('wscip_btn_color_text','#ffffff');?>; background-color: <?=get_option('wscip_btn_color','#999999');?>">
+			<button id='wscp-button' class='button wscp-button' value='' ><?= __('Calcular','wsc-plugin'); ?></button>
 
 			<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank"><?php _e('Não sei meu CEP','wsc-plugin'); ?></a>
 
