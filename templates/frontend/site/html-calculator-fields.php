@@ -14,7 +14,7 @@
 	</div>
 	</div>
 	<div id="shipping-calculator-modal" uk-modal>
-		<div class="uk-modal-dialog uk-modal-body">
+		<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 		<button class="uk-modal-close-outside" type="button" uk-close></button>		
 		<h2 class="uk-modal-title">Calcule o frete para saber os valores de entrega</h2>
 			<p>Você poderá ver os custos e prazos de entrega precisos em tudo que procurar.</p>
