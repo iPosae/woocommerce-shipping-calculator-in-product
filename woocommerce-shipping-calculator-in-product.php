@@ -91,7 +91,7 @@ if ( ! class_exists( __CLASS__ ) ) {
 					</a>
 				</p>';
 
-			printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message ); 
+			//printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message ); 
 		}
 	}
 
